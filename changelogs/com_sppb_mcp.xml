@@ -3,6 +3,25 @@
     <changelog>
         <element>com_sppb_mcp</element>
         <type>component</type>
+        <version>1.5.1</version>
+        <addition>
+            <item><![CDATA[Article text backup: before an AI change to an article layout the article text is saved with the version snapshot, and restoring that version from the dashboard restores the text too]]></item>
+            <item><![CDATA[After every change the bridge cleans the Joomla cache of SP Page Builder and articles, and the page cache when the System - Page Cache plugin is enabled, so visitors see the new version right away]]></item>
+            <item><![CDATA[Explicit check for unsupported databases: the installer, the bridge and the dashboard state that only MySQL and MariaDB are supported]]></item>
+            <item><![CDATA[MCP clients tracked per user and per client type: a Claude Desktop extension and a local server of the same user no longer overwrite each other, and administrators see every client connected to the site with version, last use and status]]></item>
+            <item><![CDATA[Requests that do not report a client version (MCP servers older than 1.3.0, n8n, scripts) are listed as clients without version, with their User-Agent; clients not seen for 30 days are shown as no longer active]]></item>
+            <item><![CDATA[The MCP server contacts the site as soon as the AI client starts it, so the dashboard shows the connected client without waiting for the first tool call]]></item>
+        </addition>
+        <change>
+            <item><![CDATA[Joomla 6 and PHP 8.3 or later are now required]]></item>
+            <item><![CDATA[Dashboard introduction: what the component does, how it protects the site and how to get started, with the installed versions]]></item>
+            <item><![CDATA[The Claude Desktop extension downloaded from the dashboard has the version in its file name (e.g. sppb-mcp-example-com-v1.5.1.mcpb)]]></item>
+            <item><![CDATA[Compatible with SP Page Builder 6.10: the edit lock is ignored when its "Disable padlock" option is enabled]]></item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
         <version>1.4.1</version>
         <addition>
             <item><![CDATA[Changelog shown in Joomla: "Changelog" button in System &gt; Update &gt; Extensions and in System &gt; Manage &gt; Extensions]]></item>
