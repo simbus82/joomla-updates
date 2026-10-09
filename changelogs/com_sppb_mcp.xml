@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
+        <version>1.4.1</version>
+        <addition>
+            <item><![CDATA[Changelog shown in Joomla: "Changelog" button in System &gt; Update &gt; Extensions and in System &gt; Manage &gt; Extensions]]></item>
+        </addition>
+        <change>
+            <item><![CDATA[The build stops when the changelog has no entry for the version being released]]></item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
+        <version>1.4.0</version>
+        <addition>
+            <item><![CDATA[New sppb_get_site_info tool: site and administrator URLs, Joomla and SP Page Builder versions, URL settings]]></item>
+            <item><![CDATA[Every page result includes its URLs (frontend, friendly menu URL, SP Page Builder editor), so the AI can open the page and check the result]]></item>
+            <item><![CDATA[Joomla update server: new versions appear in System &gt; Update &gt; Extensions and install with one click (SHA-256/SHA-512 verified)]]></item>
+        </addition>
+        <change>
+            <item><![CDATA[Dashboard redesigned with native Joomla 6 components: toolbar actions, native tabs, status table with a dedicated Actions column, standard history table]]></item>
+            <item><![CDATA[Server instructions include the site address and ask the AI to verify changes in a browser when one is available]]></item>
+            <item><![CDATA[Language files cleaned up]]></item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
+        <version>1.3.0</version>
+        <addition>
+            <item><![CDATA[Update notice when the MCP client (Claude Desktop extension or client package) is older than the version shipped by the site, both in the dashboard and in Claude]]></item>
+            <item><![CDATA[The bridge ping reports the component version and the latest client version]]></item>
+        </addition>
+        <note>
+            <item><![CDATA[Claude Desktop extensions 1.2.0 do not report their version: update them once from the dashboard to receive future notices]]></item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
+        <version>1.2.0</version>
+        <addition>
+            <item><![CDATA[Claude Desktop extension (.mcpb) generated for each site: one-click install, site URL prefilled, API token stored securely by Claude Desktop]]></item>
+            <item><![CDATA[Ready-made prompts: analyze a page, create a landing page, edit a page, site health check]]></item>
+            <item><![CDATA[Server instructions that guide the AI to work safely (outline first, per-element edits, unpublished pages, confirmation before deleting)]]></item>
+        </addition>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
+        <version>1.1.0</version>
+        <security>
+            <item><![CDATA[Every change made through the MCP bridge and every rollback is written to Joomla's User Actions Log]]></item>
+            <item><![CDATA[Failed authentication attempts are logged to administrator/logs/sppb_mcp_auth.php; authentication errors are uniform and do not reveal which users exist]]></item>
+            <item><![CDATA[Write actions require POST; the API token is no longer embedded in the dashboard HTML]]></item>
+            <item><![CDATA[Explicit permission checks in the dashboard (charset conversion, rollback, client package download)]]></item>
+            <item><![CDATA[Input validation for addon names, column layouts and presets]]></item>
+        </security>
+        <fix>
+            <item><![CDATA[Saving an SP Page Builder layout on an article failed with error 500 on MySQL/MariaDB strict mode]]></item>
+            <item><![CDATA[Dates are stored in UTC as Joomla expects]]></item>
+            <item><![CDATA[Database connections with host:port, sockets, IPv6 and SSL]]></item>
+            <item><![CDATA[Not found pages return 404 instead of success]]></item>
+        </fix>
+        <addition>
+            <item><![CDATA[Pages open in the SP Page Builder editor by another user are not modified (HTTP 409)]]></item>
+            <item><![CDATA[Option to limit the automatic MCP backups kept for each page]]></item>
+        </addition>
+        <change>
+            <item><![CDATA[Every change runs in a database transaction with a page lock]]></item>
+            <item><![CDATA[MCP tool annotations (read-only and destructive tools); write tools hidden in read-only mode]]></item>
+            <item><![CDATA[Locked dependencies for the MCP client package]]></item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
+        <version>1.0.1</version>
+        <security>
+            <item><![CDATA[The component options (gateway, read-only mode, force HTTPS, allowed groups, snapshots) are now enforced by the bridge]]></item>
+            <item><![CDATA[Disabling the Joomla API token plugins also revokes access to the bridge]]></item>
+            <item><![CDATA[The API token is never created or re-enabled automatically: explicit Generate / Regenerate API Token action]]></item>
+            <item><![CDATA[Uninstalling the component removes the /api/sppb-mcp.php endpoint]]></item>
+        </security>
+        <fix>
+            <item><![CDATA[The installer no longer depends on the Joomla 6 backward compatibility plugin]]></item>
+            <item><![CDATA[Package archives built on Windows used backslash paths]]></item>
+        </fix>
+    </changelog>
+</changelogs>
