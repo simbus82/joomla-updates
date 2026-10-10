@@ -3,6 +3,18 @@
     <changelog>
         <element>com_sppb_mcp</element>
         <type>component</type>
+        <version>1.5.3</version>
+        <fix>
+            <item><![CDATA[Pages created or edited by the AI open correctly in the SP Page Builder frontend editor: addons are saved with all their default settings, as the editor does (before, a missing setting left the frontend editor blank)]]></item>
+            <item><![CDATA[The compact addon schema no longer hides fields when two groups share a title (for example the custom colors of the button)]]></item>
+        </fix>
+        <change>
+            <item><![CDATA[New test that opens the SP Page Builder frontend editor in a headless browser and fails on JavaScript errors]]></item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
         <version>1.5.2</version>
         <security>
             <item><![CDATA[Deleting a page through the MCP moves it to the SP Page Builder trash: it stays recoverable with all its versions (before, the versions were deleted together with the page)]]></item>
