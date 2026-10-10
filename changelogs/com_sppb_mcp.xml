@@ -3,6 +3,32 @@
     <changelog>
         <element>com_sppb_mcp</element>
         <type>component</type>
+        <version>1.6.1</version>
+        <fix>
+            <item><![CDATA[Section anchors work: the anchor is saved as settings.id, the key SP Page Builder renders (section_id and similar names are converted), and section settings are checked like addon settings]]></item>
+            <item><![CDATA[Elements created by the AI get every common setting with its default, as in the editor: no more PHP warnings on published pages with div containers]]></item>
+            <item><![CDATA[Colors without "type" (title_color and other advanced colors) are completed, so they are no longer ignored]]></item>
+            <item><![CDATA[Sizes with units such as "16px" in sliders (border radius, widths) are split into number and unit, so the CSS is valid (before: 16pxpx)]]></item>
+            <item><![CDATA[Invalid select values are not saved: the default is used and the warning says so]]></item>
+            <item><![CDATA[Tab and accordion items always get their list of rows: rows can be added to them, and text sent in an item becomes a row with a text block]]></item>
+            <item><![CDATA[Updating tab or accordion items without their content keeps the rows they hold]]></item>
+            <item><![CDATA[Element labels are saved as the editor does (admin_label): changing the text of a heading no longer renames it, and the new label argument renames sections and elements]]></item>
+            <item><![CDATA[sppb_replace_text only changes content by default (texts, links, image paths): option values such as "left" or "before" are no longer replaced by accident]]></item>
+            <item><![CDATA[Popups: units of reappear_after such as "days" are converted to the ones SP Page Builder knows, and trigger numbers are checked]]></item>
+            <item><![CDATA[sppb_list_pages also lists dynamic content pages, as the Pages list of SP Page Builder does]]></item>
+            <item><![CDATA[The page outline keeps a space between text blocks]]></item>
+            <item><![CDATA[The health audit counts addons as sppb_list_addons does]]></item>
+        </fix>
+        <change>
+            <item><![CDATA[Tool results say more: list_versions (total and how many versions are kept), duplicate_node (map of the new IDs), insert_saved_section (outline of what was inserted), set_popup (saved trigger), update_page_settings (saved values), purge_page_css (why nothing was deleted), health_audit (verdict and actions)]]></item>
+            <item><![CDATA[sppb_get_addon_schema explains values, when a field applies and how to write typography, sliders, colors and links; it also returns the settings of sections and columns]]></item>
+            <item><![CDATA[sppb_get_page_full returns og_image as a path and can leave out the raw layout]]></item>
+            <item><![CDATA[Tool descriptions rewritten after a full test of the 33 tools from Claude Desktop]]></item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
         <version>1.6.0</version>
         <addition>
             <item><![CDATA[Page structure of SP Page Builder 6: the AI reads and edits nested rows, div containers and the rows inside tab and accordion items]]></item>
