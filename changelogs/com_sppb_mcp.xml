@@ -3,6 +3,14 @@
     <changelog>
         <element>com_sppb_mcp</element>
         <type>component</type>
+        <version>1.6.3</version>
+        <fix>
+            <item><![CDATA[Updating only the link of an element (for example the url of a button) no longer adds a stray "type": "url" to its settings, which with older versions overwrote the style of the button]]></item>
+        </fix>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
         <version>1.6.2</version>
         <fix>
             <item><![CDATA[Addons that cannot render on the site (SP Page Builder Free renders only some of them) are refused by every write tool instead of being saved as elements that show nothing; allow_unrendered_addons saves them anyway]]></item>
