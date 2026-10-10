@@ -6,14 +6,14 @@
         <element>com_sppb_mcp</element>
         <type>component</type>
         <client>administrator</client>
-        <version>1.6.0</version>
-        <infourl title="SPPB AI MCP Bridge 1.6.0">https://github.com/simbus82/joomla-updates/releases/tag/com_sppb_mcp-v1.6.0</infourl>
+        <version>1.6.1</version>
+        <infourl title="SPPB AI MCP Bridge 1.6.1">https://github.com/simbus82/joomla-updates/releases/tag/com_sppb_mcp-v1.6.1</infourl>
         <changelogurl>https://raw.githubusercontent.com/simbus82/joomla-updates/main/changelogs/com_sppb_mcp.xml</changelogurl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/simbus82/joomla-updates/releases/download/com_sppb_mcp-v1.6.0/com_sppb_mcp-v1.6.0.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/simbus82/joomla-updates/releases/download/com_sppb_mcp-v1.6.1/com_sppb_mcp-v1.6.1.zip</downloadurl>
         </downloads>
-        <sha256>321db8577c078eea344627bd9fdd788d91e90bc81ac4f768617b5fc3bd30560a</sha256>
-        <sha512>dbd27a6db4274d92715ac32a5c819fe1a1fd0ed77e677b6c3ecb097d53a95a90ad945382d155ed9ada99053e9ce35d102f48f23df93d71fed34ce5c4ee618358</sha512>
+        <sha256>dd0b1e89966c8046de24003fa71da5724ef9a8bd70df5383febec923b0cd89cf</sha256>
+        <sha512>e6a1fe4dadf6bd1fbab97bef432efa08b7b9f644115e961f8d25e01747bef71e25090c50b779f298a3ee36ac1b7b3c425e29cc85566487e657def0431cfeee2a</sha512>
         <tags>
             <tag>stable</tag>
         </tags>
