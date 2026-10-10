@@ -3,6 +3,21 @@
     <changelog>
         <element>com_sppb_mcp</element>
         <type>component</type>
+        <version>1.6.2</version>
+        <fix>
+            <item><![CDATA[Addons that cannot render on the site (SP Page Builder Free renders only some of them) are refused by every write tool instead of being saved as elements that show nothing; allow_unrendered_addons saves them anyway]]></item>
+            <item><![CDATA[Emoji and other 4-byte characters are refused with an explanation when the table cannot store them (not utf8mb4), instead of letting MySQL reject the save or cut the text]]></item>
+            <item><![CDATA[Column widths stored by the editor ("33.33%") are left as they are]]></item>
+            <item><![CDATA[Option values are compared without case, as the editor stores some of them ("Left")]]></item>
+        </fix>
+        <addition>
+            <item><![CDATA[New tool sppb_check_page: checks a page, or a layout before saving it, without changing anything: elements that cannot render, settings with no effect, invalid values, missing settings that cause PHP warnings, tab/accordion items that cannot hold rows, orphan rows and broken references, links to anchors that do not exist. Most issues come with the fix]]></item>
+            <item><![CDATA[sppb_get_site_info and sppb_list_addons report the SP Page Builder edition and the addons that cannot render on the site]]></item>
+        </addition>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
         <version>1.6.1</version>
         <fix>
             <item><![CDATA[Section anchors work: the anchor is saved as settings.id, the key SP Page Builder renders (section_id and similar names are converted), and section settings are checked like addon settings]]></item>
