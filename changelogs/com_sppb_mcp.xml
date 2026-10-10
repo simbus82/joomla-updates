@@ -3,6 +3,31 @@
     <changelog>
         <element>com_sppb_mcp</element>
         <type>component</type>
+        <version>1.5.2</version>
+        <security>
+            <item><![CDATA[Deleting a page through the MCP moves it to the SP Page Builder trash: it stays recoverable with all its versions (before, the versions were deleted together with the page)]]></item>
+        </security>
+        <fix>
+            <item><![CDATA[Pages no longer break (HTTP 500) when the AI adds an addon without settings, such as a divider]]></item>
+            <item><![CDATA[A section title set by the AI is saved as an internal label instead of being shown on the page as a heading]]></item>
+            <item><![CDATA[Article layouts created by the AI are enabled, so they show on the article page]]></item>
+            <item><![CDATA[Changing part of a typography keeps the other values (font, weight, sizes on other devices)]]></item>
+            <item><![CDATA[A line height without unit is kept as a multiplier instead of becoming pixels]]></item>
+            <item><![CDATA[Duplicated pages keep nested rows and the content of tabs and accordions; the copy is unpublished]]></item>
+            <item><![CDATA[Shorter lists (accordion, tab items) replace the previous ones instead of keeping old items]]></item>
+            <item><![CDATA[Section and column backgrounds set by the AI are displayed; links without a type get their URL]]></item>
+            <item><![CDATA[Addon schemas that use SP Page Builder classes (articles, map, opt-in form) can be read]]></item>
+        </fix>
+        <change>
+            <item><![CDATA[The bridge maps common setting mistakes to the SP Page Builder keys and returns warnings for unknown settings and invalid values]]></item>
+            <item><![CDATA[Addon schemas are compact, with translated labels and the settings every addon accepts]]></item>
+            <item><![CDATA[New pages are unpublished by default; page attributes are merged instead of replaced; the Open Graph image is stored in the editor format]]></item>
+            <item><![CDATA[The page list hides trashed pages and reports the total; tool descriptions and AI instructions corrected]]></item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
         <version>1.5.1</version>
         <addition>
             <item><![CDATA[Article text backup: before an AI change to an article layout the article text is saved with the version snapshot, and restoring that version from the dashboard restores the text too]]></item>
