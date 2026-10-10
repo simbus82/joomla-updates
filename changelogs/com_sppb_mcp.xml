@@ -3,6 +3,30 @@
     <changelog>
         <element>com_sppb_mcp</element>
         <type>component</type>
+        <version>1.6.0</version>
+        <addition>
+            <item><![CDATA[Page structure of SP Page Builder 6: the AI reads and edits nested rows, div containers and the rows inside tab and accordion items]]></item>
+            <item><![CDATA[New tool sppb_get_node: read one section, column or element with its settings and position, without downloading the whole page]]></item>
+            <item><![CDATA[New tool sppb_move_node: move elements to another column or div, reorder elements, sections, nested rows and columns]]></item>
+            <item><![CDATA[New tool sppb_duplicate_node: duplicate an element or a section with everything inside it]]></item>
+            <item><![CDATA[New tools sppb_list_versions and sppb_restore_version: the AI can list the saved versions of a page and undo changes (the restore is reversible)]]></item>
+            <item><![CDATA[sppb_add_section creates nested rows in a column or rows in a tab/accordion item; sppb_add_addon adds into a div and at a chosen position]]></item>
+            <item><![CDATA[New tools sppb_find_nodes and sppb_replace_text: find elements by text or addon type and replace a text on a page or on the whole site, with a dry run first]]></item>
+            <item><![CDATA[New tools sppb_insert_saved_section and sppb_insert_saved_addon: insert sections and elements saved in the SP Page Builder library]]></item>
+            <item><![CDATA[Popups: create them with sppb_create_page and set where and when they appear with sppb_set_popup (stored as the editor does)]]></item>
+            <item><![CDATA[Pages get a language and a category; sppb_get_site_info lists the available ones]]></item>
+        </addition>
+        <change>
+            <item><![CDATA[The page outline is a tree: nested rows, div children and tab/accordion rows appear where they are on the page, with heading levels, longer text and hidden devices]]></item>
+            <item><![CDATA[Deleting a section, column or element also removes everything nested in it, so no hidden leftovers stay in the page]]></item>
+            <item><![CDATA[When the site administrator enables read-only mode, the MCP server hides the write tools]]></item>
+            <item><![CDATA[Errors returned to the AI start with the HTTP status and its meaning (for example 409: page open in the editor)]]></item>
+            <item><![CDATA[Tool descriptions in the dashboard updated]]></item>
+        </change>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
         <version>1.5.3</version>
         <fix>
             <item><![CDATA[Pages created or edited by the AI open correctly in the SP Page Builder frontend editor: addons are saved with all their default settings, as the editor does (before, a missing setting left the frontend editor blank)]]></item>
