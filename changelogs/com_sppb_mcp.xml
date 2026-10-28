@@ -3,6 +3,36 @@
     <changelog>
         <element>com_sppb_mcp</element>
         <type>component</type>
+        <version>1.7.1</version>
+        <fix>
+            <item><![CDATA[The elements inside a collection (dynamic_content_collection) can be found, read, edited, moved, duplicated and deleted, and appear in the page outline and in the page check: before, the tools did not see them]]></item>
+            <item><![CDATA[Copies of sections, elements and pages give new IDs to the elements of collections too: before, the copies kept the IDs of the original elements]]></item>
+            <item><![CDATA[No more "Unknown setting" warnings for the section and column settings that SP Page Builder writes itself (sm_col, xs_col, instFormId, global_* and the other common settings)]]></item>
+            <item><![CDATA[The full page layout returns node IDs as strings, like the page outline, also on pages that older editors saved with numeric IDs]]></item>
+        </fix>
+        <addition>
+            <item><![CDATA[New option "Group Changes Made Within (seconds)" (default 60): changes made one after the other by the same user share the version saved before the first of them, so a session of many small edits no longer deletes the older versions of the page]]></item>
+            <item><![CDATA[The page check reports IDs shared by several elements of a page]]></item>
+        </addition>
+        <note>
+            <item><![CDATA[Includes the changes of 1.7.0: Joomla 5 and PHP 8.1 or later are supported again]]></item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
+        <version>1.7.0</version>
+        <change>
+            <item><![CDATA[Joomla 5 is supported again: the component installs on Joomla 5 and 6 with PHP 8.1 or later, and updates are offered to both]]></item>
+            <item><![CDATA[Verified on Joomla 5.3.4 with PHP 8.1, MariaDB 10.11 and SP Page Builder Pro 6.9.1: installation, dashboard and the full bridge test suite]]></item>
+        </change>
+        <note>
+            <item><![CDATA[SP Page Builder 6.9.1 shows popups without their content on any Joomla version: update SP Page Builder to 6.10 or later to use popups]]></item>
+        </note>
+    </changelog>
+    <changelog>
+        <element>com_sppb_mcp</element>
+        <type>component</type>
         <version>1.6.3</version>
         <fix>
             <item><![CDATA[Updating only the link of an element (for example the url of a button) no longer adds a stray "type": "url" to its settings, which with older versions overwrote the style of the button]]></item>
